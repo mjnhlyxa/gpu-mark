@@ -19,7 +19,7 @@
     "rxjs-compat": "^6.5.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start dotenv_config_path=.env.prod",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
