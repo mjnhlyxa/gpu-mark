@@ -15,8 +15,6 @@ function App({ testAction, test1 }) {
     );
 }
 
-// export default App;
-
 const mapStateToProps = ({ test: { test1 } }) => ({
     test1
 });

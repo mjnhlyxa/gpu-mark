@@ -1,0 +1,42 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+ <title/>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1330" d="m17.23535,46.5l0,3.5l9,0l0,-3.5l-1,0l0,2.5l-7,0l0,-2.5l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1332" d="m28.23535,46.5l0,3.5l23,0l0,-3.5l-1,0l0,2.5l-21,0l0,-2.5l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1334" d="m19.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1336" d="m21.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1338" d="m23.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1340" d="m30.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1342" d="m32.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1344" d="m34.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1346" d="m36.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1348" d="m38.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1350" d="m40.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1352" d="m42.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1354" d="m44.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1356" d="m46.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1358" d="m48.23535,46.5l0,3l1,0l0,-3l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1.058301" stroke-miterlimit="4" stroke-dashoffset="0" id="rect1299" d="m13.20605,17.9707l0,0.5293l0,28.5293l45.0586,0l0,-29.0586l-45.0586,0zm46.11719,1.0586l-2.11719,0l0,26.9414l-42.9414,0l45.05859,-26.9414z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1307" d="m45.20019,25.31445l-0.92968,0.3711l1.72656,4.31445l-0.01172,0l-2.84961,-3.80078l-0.80078,0.60156l3.15039,4.19922l1.98828,0l-2.27344,-5.68555z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1310" d="m51.45605,29.09766l-4.20508,3.14257l-0.006,1.98829l5.6914,-2.26368l-0.37109,-0.92968l-4.31641,1.71875l0,-0.01172l3.80469,-2.84375l-0.59751,-0.80078z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1312" d="m43.89355,33.83789l1.7461,5.86914l0.95703,-0.28515l-1.32422,-4.45313l0.0117,0.002l2.49023,4.04297l0.85156,-0.52344l-2.75195,-4.4707l-1.98045,-0.18169z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1314" d="m44.40723,30.64844l-5.86524,1.75976l0.28711,0.95703l4.45117,-1.33398l-0.002,0.01172l-4.03906,2.5l0.52734,0.84961l4.46289,-2.76367l0.17779,-1.98047z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1316" d="m47.40527,26.11328l-0.74219,5.19727l1.40625,1.40625l2.41211,-5.62891l-0.91992,-0.39453l-1.83008,4.27148l-0.008,-0.0078l0.67188,-4.70312l-0.99005,-0.14064z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1318" d="m46.96582,33.53906l-1.4043,1.40625l5.62695,2.41211l0.39454,-0.91797l-4.27149,-1.83007l0.01,-0.0098l4.70117,0.67187l0.14062,-0.99023l-5.19749,-0.74216z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1320" d="m43.49121,32.13477l-2.91602,5.38476l0.87891,0.47656l2.21289,-4.08789l0.008,0.0098l-1.09765,4.6211l0.97265,0.23242l1.21289,-5.10938l-1.27167,-1.52737z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1322" d="m40.71777,27.33984l-0.47461,0.87891l4.0918,2.20508l-0.008,0.0059l-4.625,-1.08789l-0.22852,0.97461l5.10938,1.20117l1.52734,-1.27539l-5.39239,-2.90239z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1324" d="m5.73535,14l0,1l5.5,0l0,33.5l1,0l0,-34.5l-6.5,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1326" d="m10.23535,21.5l0,7l1,0l0,-7l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1328" d="m10.23535,33.5l0,11l1,0l0,-11l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1360" d="m15.23535,40.5l0,4.5l4.5,0l0,-1l-3.5,0l0,-3.5l-1,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" id="path1363" d="m52.73535,20l0,1l2.5,0l0,2.5l1,0l0,-3.5l-3.5,0z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1" stroke-miterlimit="4" stroke-dashoffset="0" id="path1303" d="m45.73535,30c-1.37479,0 -2.5,1.12521 -2.5,2.5c0,1.37479 1.12521,2.5 2.5,2.5c1.37479,0 2.5,-1.12521 2.5,-2.5c0,-1.37479 -1.12521,-2.5 -2.5,-2.5zm0,1c0.83435,0 1.5,0.66565 1.5,1.5c0,0.83435 -0.66565,1.5 -1.5,1.5c-0.83435,0 -1.5,-0.66565 -1.5,-1.5c0,-0.83435 0.66565,-1.5 1.5,-1.5z"/>
+  <path clip-rule="nonzero" fill="#663399" fill-rule="nonzero" stroke-width="1" stroke-miterlimit="4" stroke-dashoffset="0" id="path1301" d="m45.73535,25c-4.13621,0 -7.5,3.36379 -7.5,7.5c0,4.13621 3.36379,7.5 7.5,7.5c4.13621,0 7.5,-3.36379 7.5,-7.5c0,-4.13621 -3.36379,-7.5 -7.5,-7.5zm0,1c3.59577,0 6.5,2.90423 6.5,6.5c0,3.59577 -2.90423,6.5 -6.5,6.5c-3.59577,0 -6.5,-2.90423 -6.5,-6.5c0,-3.59577 2.90423,-6.5 6.5,-6.5z"/>
+ </g>
+</svg>
