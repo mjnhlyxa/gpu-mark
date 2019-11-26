@@ -5,7 +5,7 @@ import "../../styles/containers/header.scss";
 import logo from "../../assets/images/logo.svg";
 
 const styles = {
-    bounce: {
+    tada: {
         animation: "infinite 3s",
         animationName: Radium.keyframes(tada, "tada")
     }
@@ -13,13 +13,13 @@ const styles = {
 
 function Header() {
     return (
-        <div className="header">
-            <div className="header__logo">
+        <div className="header-wrap">
+            <div className="header-wrap__logo">
                 <StyleRoot>
-                    <img src={logo} alt="logo" style={styles.bounce}></img>
+                    <img src={logo} alt="logo" style={styles.tada}></img>
                 </StyleRoot>
             </div>
-            <p className="header__app-name effect-box">GPU Mark</p>
+            <p className="header-wrap__app-name effect-box">GPU Mark</p>
             <div className="search-bar"></div>
         </div>
     );

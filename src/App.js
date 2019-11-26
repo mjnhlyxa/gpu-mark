@@ -3,15 +3,17 @@ import { connect } from "react-redux";
 import "./App.scss";
 import { testAction } from "./actions/actions";
 import Routes from "./routes/route";
+import Header from "./containers/layout/header";
 
 function App({ testAction, test1 }) {
     console.log(process.env.REACT_APP_TEST);
     testAction();
     console.log(test1);
     return (
-        <div>
+        <React.Fragment>
+            <Header />
             <Routes />
-        </div>
+        </React.Fragment>
     );
 }
 

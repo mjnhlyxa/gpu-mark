@@ -1,17 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/main.scss";
-import Header from "../layout/header";
+import { bounceOutRight, bounceInLeft } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
-function MainPage() {
+const styles = {
+    tada: {
+        animation: "1s",
+        animationName: Radium.keyframes(bounceOutRight, "bounceOutRight")
+    },
+    slideInLeft: {
+        animation: "1s",
+        animationName: Radium.keyframes(bounceInLeft, "bounceInLeft")
+    }
+};
+
+function MainPage({ history }) {
+    const [style, setStyle] = useState(styles.slideInLeft);
+    const onClick = () => {
+        setStyle(styles.tada);
+        setTimeout(() => {
+            history.push("/test");
+        }, 500);
+    };
     return (
-        <div className="main-page-wrap">
-            <div className="main-header-wrap">
-                <Header />
-            </div>
-            <div className="main-content-wrap">
-                <div className="main-content-wrap__breadcrumb"></div>
-            </div>
-            <div className="main-footer-wrap"></div>
+        <div className="main-content-wrap">
+            <StyleRoot>
+                <div style={style} className="main-content-wrap__breadcrumb">
+                    main
+                </div>
+            </StyleRoot>
+            <button onClick={onClick}>test</button>
         </div>
     );
 }
