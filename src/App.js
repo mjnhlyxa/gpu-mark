@@ -4,6 +4,7 @@ import "./App.scss";
 import { testAction } from "./actions/actions";
 import Routes from "./routes/route";
 import Header from "./containers/layout/header";
+import Footer from "./containers/layout/footer";
 
 function App({ testAction, test1 }) {
     console.log(process.env.REACT_APP_TEST);
@@ -13,6 +14,7 @@ function App({ testAction, test1 }) {
         <React.Fragment>
             <Header />
             <Routes />
+            <Footer />
         </React.Fragment>
     );
 }

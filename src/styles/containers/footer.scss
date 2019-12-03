@@ -1,0 +1,53 @@
+@import "../variables.scss";
+
+.footer-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-min-height;
+    box-shadow: $box-shadow1;
+    text-align: center;
+    &__reserved {
+        padding: 8px 10px;
+        font-weight: bold;
+    }
+
+    &__info {
+        font-size: 13px;
+        margin-top: 7px;
+        span {
+            padding: 0 10px;
+        }
+    }
+
+    &__feedback {
+        margin: 6px 18px;
+        padding: 1px 8px;
+        border-radius: 13px;
+        background-color: #9973bf;
+        width: 80px;
+        color: #fff;
+        text-align: left;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        &-icon {
+            width: 13px;
+            margin: 1px 5px;
+        }
+        &-text {
+            font-size: 13px;
+            position: absolute;
+            top: 2px;
+        }
+        @include mobile {
+            position: relative;
+            margin: 10px auto;
+        }
+    }
+    @include mobile {
+        height: auto;
+        min-height: $footer-min-height;
+        max-height: $footer-max-height;
+    }
+}

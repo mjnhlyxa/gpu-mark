@@ -3,7 +3,7 @@
     background: $main-background;
     box-shadow: $box-shadow1;
     width: 100%;
-    height: 48px;
+    height: $header-height;
     &__logo {
         padding: 0px 20px;
         float: left;

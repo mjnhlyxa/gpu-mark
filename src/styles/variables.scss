@@ -1,8 +1,13 @@
+$header-height: 48px;
+$footer-min-height: 36px;
+$footer-max-height: 92px;
+
 //colors
 $white: #fff;
 $black: #000;
 $purple-text1: #663399;
 $purple-text2: #814fb3;
+$purple-text3: #9973bf;
 $orange1: #ffcd38;
 $orange2: #fff6dc;
 
@@ -10,5 +15,22 @@ $main-background: $white;
 
 
 
-//
+//shadow
 $box-shadow1: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+
+//screen size
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+
+//mixin
+@mixin tablet {
+    @media screen and (max-width: $screen-md-min) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: $screen-sm-min) {
+        @content;
+    }
+}
