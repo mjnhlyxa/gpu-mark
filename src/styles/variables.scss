@@ -1,6 +1,10 @@
 $header-height: 48px;
 $footer-min-height: 36px;
+$footer-height: 72px;
 $footer-max-height: 92px;
+$component-padding: 20px;
+$component-padding1: 10px;
+
 
 //colors
 $white: #fff;
@@ -10,13 +14,18 @@ $purple-text2: #814fb3;
 $purple-text3: #9973bf;
 $orange1: #ffcd38;
 $orange2: #fff6dc;
+$orange3: #fcbd5f;
 
 $main-background: $white;
+
+//font
+$main-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 
 
 //shadow
 $box-shadow1: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+$box-shadow2: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
 
 //screen size
 $screen-sm-min: 576px;

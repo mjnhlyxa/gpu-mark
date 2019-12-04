@@ -1,35 +1,43 @@
 import React, { useState } from "react";
-import "../../styles/main.scss";
-import { bounceOutRight, bounceInLeft } from "react-animations";
-import Radium, { StyleRoot } from "radium";
-
-const styles = {
-    tada: {
-        animation: "1s",
-        animationName: Radium.keyframes(bounceOutRight, "bounceOutRight")
-    },
-    slideInLeft: {
-        animation: "1s",
-        animationName: Radium.keyframes(bounceInLeft, "bounceInLeft")
-    }
-};
+import { useTranslation } from "react-i18next";
+import "../../styles/containers/main.scss";
+import vgaIcon from "../../assets/images/vga.svg";
+import cpuIcon from "../../assets/images/cpu.svg";
+import stressGpuIcon from "../../assets/images/stress-vga.svg";
+import stressCpuIcon from "../../assets/images/stress-cpu.svg";
+import CardButton from "../../components/buttons/cardButton";
 
 function MainPage({ history }) {
-    const [style, setStyle] = useState(styles.slideInLeft);
-    const onClick = () => {
-        setStyle(styles.tada);
-        setTimeout(() => {
-            history.push("/test");
-        }, 500);
-    };
+    const { t } = useTranslation();
     return (
         <div className="main-content-wrap">
-            <StyleRoot>
-                <div style={style} className="main-content-wrap__breadcrumb">
-                    main
-                </div>
-            </StyleRoot>
-            <button onClick={onClick}>test</button>
+            <div className="main-content__action-btn">
+                <CardButton
+                    icon={vgaIcon}
+                    action={t('dashboard.label.runBenchMark')}
+                    label={t('dashboard.label.runGpu')}
+                />
+                <CardButton
+                    icon={cpuIcon}
+                    action={t('dashboard.label.runBenchMark')}
+                    label={t('dashboard.label.runCpu')}
+                />
+                <CardButton
+                    icon={stressGpuIcon}
+                    action={t('dashboard.label.stressTest')}
+                    label={t('dashboard.label.runGpu')}
+                />
+                <CardButton
+                    icon={stressCpuIcon}
+                    action={t('dashboard.label.stressTest')}
+                    label={t('dashboard.label.runCpu')}
+                />
+                <CardButton
+                    icon={vgaIcon}
+                    action={t('dashboard.label.benchmarkResult')}
+                    label={t('dashboard.label.report')}
+                />
+            </div>
         </div>
     );
 }

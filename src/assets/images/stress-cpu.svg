@@ -1,0 +1,23 @@
+<svg width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="4.759433" height="4.759433" id="canvas_background" fill="none"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <rect height="2" width="7" x="42" y="12.5" id="svg_2" fill="#fcbd5f"/>
+  <rect height="2" width="7" x="42" y="17.5" id="svg_3" fill="#fcbd5f"/>
+  <rect height="2" width="7" x="42" y="22.5" id="svg_4" fill="#fcbd5f"/>
+  <rect height="2" width="7" x="42" y="27.5" id="svg_5" fill="#fcbd5f"/>
+  <rect height="2" width="7" x="42" y="32.5" id="svg_6" fill="#fcbd5f"/>
+  <rect height="2" width="7" x="42" y="37.5" id="svg_7" fill="#fcbd5f"/>
+  <path d="m39.5,3l-2,0l0,6.999634l-3,0l0,-6.999634l-2,0l0,6.999634l-3,0l0,-6.999634l-2,0l0,6.999634l-3,0l0,-6.999634l-2,0l0,6.999634l-3,0l0,-6.999634l-2,0l0,6.999634l-3,0l0,-6.999634l-2,0l0,6.999634l-2.501343,0l0,2.500366l-6.998657,0l0,2l6.998657,0l0,3l-6.998657,0l0,2l6.998657,0l0,3l-6.998657,0l0,2l6.998657,0l0,3l-6.998657,0l0,2l6.998657,0l0,3l-6.998657,0l0,2l6.998657,0l0,3l-6.998657,0l0,2l6.998657,0l0,2.499634l32,0l0,-32l-2.498657,0l0,-6.999634zm-26.207031,11.707031l1.414062,-1.414062l1.430664,1.430176l-1.414062,1.414062l-1.430664,-1.430176zm19.705688,21.792603l-14,0c-1.649963,0 -3,-1.349976 -3,-3l0,-14c0,-1.649964 1.350037,-3 3,-3l14,0c1.660034,0 3,1.350036 3,3l0,14c0,1.650024 -1.339966,3 -3,3zm4.294312,2.207397l-1.429688,-1.429687l1.414063,-1.414063l1.429687,1.429688l-1.414062,1.414062z" id="svg_8" fill="#fcbd5f"/>
+  <rect height="7" width="2" x="37.5" y="42" id="svg_9" fill="#fcbd5f"/>
+  <rect height="7" width="2" x="32.5" y="42" id="svg_10" fill="#fcbd5f"/>
+  <rect height="7" width="2" x="27.5" y="42" id="svg_11" fill="#fcbd5f"/>
+  <rect height="7" width="2" x="22.5" y="42" id="svg_12" fill="#fcbd5f"/>
+  <rect height="7" width="2" x="17.5" y="42" id="svg_13" fill="#fcbd5f"/>
+  <rect height="7" width="2" x="12.5" y="42" id="svg_14" fill="#fcbd5f"/>
+ </g>
+</svg>

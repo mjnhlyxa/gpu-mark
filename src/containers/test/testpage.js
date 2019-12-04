@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { bounceOutRight, bounceInLeft } from "react-animations";
 import Radium, { StyleRoot } from "radium";
-import "../../styles/main.scss";
 
 const styles = {
     tada: {

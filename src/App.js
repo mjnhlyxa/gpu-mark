@@ -13,7 +13,12 @@ function App({ testAction, test1 }) {
     return (
         <React.Fragment>
             <Header />
-            <Routes />
+            <div className="body-wrap">
+                <div className="breadcrumb-wrap">Home</div>
+                <div className="content-wrap">
+                    <Routes />
+                </div>
+            </div>
             <Footer />
         </React.Fragment>
     );

@@ -7,6 +7,8 @@
     height: $footer-min-height;
     box-shadow: $box-shadow1;
     text-align: center;
+    z-index: 2;
+    background: $white;
     &__reserved {
         padding: 8px 10px;
         font-weight: bold;
@@ -24,7 +26,7 @@
         margin: 6px 18px;
         padding: 1px 8px;
         border-radius: 13px;
-        background-color: #9973bf;
+        background-color: $purple-text3;
         width: 80px;
         color: #fff;
         text-align: left;

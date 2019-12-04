@@ -1,22 +1,43 @@
+@import "./styles/variables.scss";
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+    height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #09d3ac;
+    color: #09d3ac;
+}
+
+.body-wrap {
+    position: absolute;
+    top: calc(#{$header-height} + #{$component-padding});
+    left: $component-padding;
+    right: $component-padding;
+    bottom: calc(#{$footer-min-height} + #{$component-padding});
+    font-family: $main-font;
+    @include mobile {
+        bottom: $footer-height;
+    }
+    .breadcrumb-wrap {
+      padding-bottom: $component-padding1;
+      border-bottom: 1px solid #dee2e6;
+      font-size: 20px;
+    }
+    .content-wrap {
+        padding-top: $component-padding;
+    }
 }
