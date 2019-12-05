@@ -9,24 +9,71 @@
         padding: 10px;
         width: fit-content;
         min-width: 180px;
+        margin: 5px 10px;
+        &:hover {
+            cursor: pointer;
+            .card-button {
+                &__icon {
+                    transform: rotate(360deg);
+                    -webkit-transform: rotate(360deg);
+                    transition: transform 1s ease all;
+                    -webkit-transition: transform 1s ease all;
+                    transform-origin: center;
+                    -webkit-transform-origin: center;
+                }
+            }
+        }
+        @include mobile {
+            padding: 5px;
+            min-width: 90px;
+            margin: 3px;
+            &:hover {
+                .card-button {
+                    &__icon {
+                        transform: none;
+                    }
+                }
+            }
+        }
     }
     &__icon {
         height: 48px;
+        transition: 1s ease all;
+        -webkit-transition: 1s ease all;
+        @include mobile {
+            height: 32px;
+        }
         img {
             width: 48px;
             height: 48px;
+            @include mobile {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
     &__content {
         margin: 5px 20px 0 20px;
+        @include mobile {
+            margin: 3px 0 0 3px;
+        }
         &-action {
             font-size: 13px;
-            opacity: .5;
+            opacity: 0.5;
+            @include mobile {
+                font-size: 11px;
+            }
         }
         &-label {
             font-size: 20px;
             font-weight: bold;
             color: $purple-text2;
+            &.orange {
+                color: $orange3;
+            }
+            @include mobile {
+                font-size: 14px;
+            }
         }
     }
 }

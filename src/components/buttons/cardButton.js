@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/components/cardButton.scss";
 
-export const CardButton = ({ icon, action, label }) => {
+export const CardButton = ({ icon, action, label, className = "" }) => {
     return (
         <div className="card-button-wrap">
             <div className="card-button__icon">
@@ -9,7 +9,9 @@ export const CardButton = ({ icon, action, label }) => {
             </div>
             <div className="card-button__content">
                 <div className="card-button__content-action">{action}</div>
-                <div className="card-button__content-label">{label}</div>
+                <div className={`card-button__content-label ${className}`}>
+                    {label}
+                </div>
             </div>
         </div>
     );

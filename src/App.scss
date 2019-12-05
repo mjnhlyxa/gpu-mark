@@ -30,14 +30,24 @@
     bottom: calc(#{$footer-min-height} + #{$component-padding});
     font-family: $main-font;
     @include mobile {
+        top: calc(#{$header-height} + #{$component-padding-m});
+        left: $component-padding-m;
+        right: $component-padding-m;
         bottom: $footer-height;
     }
     .breadcrumb-wrap {
-      padding-bottom: $component-padding1;
-      border-bottom: 1px solid #dee2e6;
-      font-size: 20px;
+        padding-bottom: $component-padding1;
+        border-bottom: 1px solid #dee2e6;
+        font-size: 20px;
+        @include mobile {
+            font-size: 14px;
+            padding-bottom: $component-padding-m;
+        }
     }
     .content-wrap {
         padding-top: $component-padding;
+        @include mobile {
+            padding-top: $component-padding-m;
+        }
     }
 }

@@ -5,6 +5,7 @@ import vgaIcon from "../../assets/images/vga.svg";
 import cpuIcon from "../../assets/images/cpu.svg";
 import stressGpuIcon from "../../assets/images/stress-vga.svg";
 import stressCpuIcon from "../../assets/images/stress-cpu.svg";
+import analyticsIcon from "../../assets/images/analytics.svg";
 import CardButton from "../../components/buttons/cardButton";
 
 function MainPage({ history }) {
@@ -26,14 +27,16 @@ function MainPage({ history }) {
                     icon={stressGpuIcon}
                     action={t('dashboard.label.stressTest')}
                     label={t('dashboard.label.runGpu')}
+                    className="orange"
                 />
                 <CardButton
                     icon={stressCpuIcon}
                     action={t('dashboard.label.stressTest')}
                     label={t('dashboard.label.runCpu')}
+                    className="orange"
                 />
                 <CardButton
-                    icon={vgaIcon}
+                    icon={analyticsIcon}
                     action={t('dashboard.label.benchmarkResult')}
                     label={t('dashboard.label.report')}
                 />

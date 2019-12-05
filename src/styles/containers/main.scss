@@ -2,9 +2,14 @@
 
 .main-content {
     &-wrap {
-        
     }
     &__action-btn {
-
+        display: flex;
+        /* text-align: center; */
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        /* flex-flow: row; */
+        flex-wrap: wrap;
     }
 }
