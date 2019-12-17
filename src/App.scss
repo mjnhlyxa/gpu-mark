@@ -22,32 +22,34 @@
     color: #09d3ac;
 }
 
-.body-wrap {
-    position: absolute;
-    top: calc(#{$header-height} + #{$component-padding});
-    left: $component-padding;
-    right: $component-padding;
-    bottom: calc(#{$footer-min-height} + #{$component-padding});
-    font-family: $main-font;
-    @include mobile {
-        top: calc(#{$header-height} + #{$component-padding-m});
-        left: $component-padding-m;
-        right: $component-padding-m;
-        bottom: $footer-height;
-    }
-    .breadcrumb-wrap {
-        padding-bottom: $component-padding1;
-        border-bottom: 1px solid #dee2e6;
-        font-size: 20px;
+.gpu-mark-app {
+    // width: 1000px;
+    // margin: auto;
+    // position: relative;
+    .body-wrap {
+        position: absolute;
+        top: calc(#{$header-height} + #{$component-padding});
+        left: $component-padding;
+        right: $component-padding;
+        bottom: calc(#{$footer-min-height} + #{$component-padding});
+        font-family: $main-font;
         @include mobile {
-            font-size: 14px;
-            padding-bottom: $component-padding-m;
+            top: calc(#{$header-height} + #{$component-padding-m});
+            left: $component-padding-m;
+            right: $component-padding-m;
+            bottom: $footer-height;
         }
-    }
-    .content-wrap {
-        padding-top: $component-padding;
-        @include mobile {
-            padding-top: $component-padding-m;
+        .breadcrumb-wrap {
+            padding-bottom: $component-padding1;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 20px;
+            @include mobile {
+                font-size: 14px;
+                padding-bottom: $component-padding-m;
+            }
+        }
+        .content-wrap {
+            height: 100%;
         }
     }
 }

@@ -9,6 +9,10 @@
         float: left;
         img {
             width: 48px;
+            @include mobile {
+                width: 40px;
+                margin-top: 3px;
+            }
         }
     }
     &__app-name {
@@ -54,6 +58,11 @@
                 -webkit-transform: scale(1);
                 transform: scale(1);
             }
+        }
+        @include mobile {
+            font-size: large;
+            margin-top: 11px;
+            left: 66px;
         }
     }
 }

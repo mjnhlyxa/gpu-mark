@@ -2,14 +2,69 @@
 
 .main-content {
     &-wrap {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        @include mobile {
+            margin: 0 4px;
+        }
     }
     &__action-btn {
         display: flex;
-        /* text-align: center; */
         align-content: center;
         align-items: center;
         justify-content: center;
-        /* flex-flow: row; */
         flex-wrap: wrap;
+    }
+
+    &__benchmark-wrap {
+        height: auto;
+        flex-grow: 1;
+        margin-top: 10px;
+        justify-content: center;
+        display: flex;
+        @include mobile {
+            flex-direction: column;
+        }
+        &-run {
+            width: 800px;
+            margin-right: 20px;
+            box-shadow: $box-shadow2;
+            border-radius: 10px;
+            @include mobile {
+                flex-grow: 3;
+                order: 1;
+                width: 100%;
+                margin: 0 0 5px 0; 
+            }
+        }
+        &-details {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            @include mobile {
+                flex-grow: 1;
+                order: 0;
+                width: 100%;
+            }
+        }
+        &-score {
+            margin-bottom: 10px;
+            flex-grow: 1;
+            box-shadow: $box-shadow2;
+            border-radius: 10px;
+            @include mobile {
+                margin-bottom: 12px;
+            }
+        }
+        &-extended {
+            margin-top: 10px;
+            flex-grow: 1;
+            box-shadow: $box-shadow2;
+            border-radius: 10px;
+            @include mobile {
+                display: none;
+            }
+        }
     }
 }

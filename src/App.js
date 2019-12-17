@@ -11,16 +11,16 @@ function App({ testAction, test1 }) {
     testAction();
     console.log(test1);
     return (
-        <React.Fragment>
+        <div className="gpu-mark-app">
             <Header />
             <div className="body-wrap">
-                <div className="breadcrumb-wrap">Home</div>
+                {/* <div className="breadcrumb-wrap">Home</div> */}
                 <div className="content-wrap">
                     <Routes />
                 </div>
             </div>
             <Footer />
-        </React.Fragment>
+        </div>
     );
 }
 
