@@ -1,5 +1,5 @@
-let width = 500; // Width of the scene
-let height = 500; // Height of the scene
+let width = 300; // Width of the scene
+let height = 300; // Height of the scene
 let PERSPECTIVE = width * 0.8; // The field of view of our 3D scene
             let PROJECTION_CENTER_X = width / 2; // x center of the canvas
             let PROJECTION_CENTER_Y = height / 2; // y center of the canvas
