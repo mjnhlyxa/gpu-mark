@@ -7,6 +7,7 @@ import stressGpuIcon from "../../assets/images/stress-vga.svg";
 import stressCpuIcon from "../../assets/images/stress-cpu.svg";
 import analyticsIcon from "../../assets/images/analytics.svg";
 import CardButton from "../../components/buttons/cardButton";
+import GpuBenchmark from "../../components/gpuBench/gpuBenchmark";
 
 function MainPage({ history }) {
     const ref = React.createRef();
@@ -47,7 +48,9 @@ function MainPage({ history }) {
                 />
             </div>
             <div className="main-content__benchmark-wrap">
-                <div className="main-content__benchmark-wrap-run"></div>
+                <div className="main-content__benchmark-wrap-run">
+                    <GpuBenchmark />
+                </div>
                 <div className="main-content__benchmark-wrap-details">
                     <div className="main-content__benchmark-wrap-score"></div>
                     <div className="main-content__benchmark-wrap-extended"></div>

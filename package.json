@@ -4,6 +4,7 @@
   "private": true,
   "heroku-run-build-script": false,
   "dependencies": {
+    "gpu.js": "^2.3.0",
     "history": "^4.10.1",
     "i18next": "^19.0.1",
     "i18next-browser-languagedetector": "^4.0.1",

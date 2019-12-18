@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/components/cardButton.scss";
 
 export const CardButton = ({ icon, action, label, className = "" }) => {
