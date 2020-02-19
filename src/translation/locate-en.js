@@ -6,8 +6,8 @@ export default {
                 stressTest: 'Stress test',
                 runGpu: 'GPU',
                 runCpu: 'CPU',
-                benchmarkResult: 'Benchmark result',
-                report: 'REPORT',
+                benchmarkResult: 'Benchmark results',
+                records: 'RECORDS',
             }
         },
         footer: {

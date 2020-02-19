@@ -1,9 +1,19 @@
 import React from "react";
 import "../../styles/components/cardButton.scss";
 
-export const CardButton = ({ icon, action, label, className = "" }) => {
+export const CardButton = ({
+    icon,
+    action,
+    label,
+    className = "",
+    name,
+    onClick = () => {}
+}) => {
+    const onCardClick = () => {
+        onClick(name);
+    };
     return (
-        <div className="card-button-wrap">
+        <div className="card-button-wrap" onClick={onCardClick}>
             <div className="card-button__icon">
                 <img src={icon} alt="card-button-icon"></img>
             </div>

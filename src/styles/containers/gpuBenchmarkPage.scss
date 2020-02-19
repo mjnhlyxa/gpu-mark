@@ -1,0 +1,14 @@
+@import "../variables.scss";
+
+.run-gpu-benchmark {
+    position: relative;
+    height: 100%;
+    &_start-btn {
+        width: 120px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-65%, -70%);
+    }
+}

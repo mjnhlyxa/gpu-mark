@@ -1,0 +1,83 @@
+@import "../../variables.scss";
+
+.run-benchmark-layout {
+    &-wrapper {
+        height: 100%;
+        flex-grow: 1;
+        justify-content: center;
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        @include mobile {
+            flex-direction: column;
+        }
+        .style-root-left {
+            flex-grow: 3;
+            @include tablet {
+                flex-grow: 2;
+            }
+            @include mobile {
+                order: 1;
+                margin-bottom: 5px;
+            }
+        }
+        .style-root-top {
+            margin-bottom: 10px;
+            flex-grow: 1;
+            box-shadow: $box-shadow2;
+            border-radius: 10px;
+            @include mobile {
+                margin-bottom: 12px;
+            }
+        }
+        .style-root-bottom {
+            margin-top: 10px;
+            flex-grow: 1;
+            box-shadow: $box-shadow2;
+            border-radius: 10px;
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &-left {
+        // width: 800px;
+        margin-right: 20px;
+        box-shadow: $box-shadow2;
+        border-radius: 10px;
+        height: 100%;
+        @include mobile {
+            width: 100%;
+        }
+    }
+    &-right {
+        // width: 400px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        @include mobile {
+            flex-grow: 1;
+            order: 0;
+            width: 100%;
+        }
+    }
+    &-top {
+        // margin-bottom: 10px;
+        // flex-grow: 1;
+        // box-shadow: $box-shadow2;
+        // border-radius: 10px;
+        // @include mobile {
+        //     margin-bottom: 12px;
+        // }
+    }
+    &-bottom {
+        // margin-top: 10px;
+        // flex-grow: 1;
+        // box-shadow: $box-shadow2;
+        // border-radius: 10px;
+        // @include mobile {
+        //     display: none;
+        // }
+    }
+}

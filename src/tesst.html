@@ -1,0 +1,193 @@
+<canvas id="c"></canvas>
+<script>
+    // Originally submitted to a JS1K competition (975 bytes).
+    // Non-minified source in 35 lines for HN, because it's the latest fad :)
+    // www.gabrielgambetta.com/tiny_raytracer.html
+    // const canvas = document.getElementById('c');
+    // const ctx = canvas.getContext('2d');
+    // const imageData = ctx.createImageData(100, 100);
+
+    // // Iterate through every pixel
+    // for (let i = 0; i < imageData.data.length; i += 4) {
+    //     // Percentage in the x direction, times 255
+    //     let x = (i % 400) / 400 * 255;
+    //     // Percentage in the y direction, times 255
+    //     let y = Math.ceil(i / 400) / 100 * 255;
+
+    //     // Modify pixel data
+    //     imageData.data[i + 0] = 200;        // R value
+    //     imageData.data[i + 1] = 200;        // G value
+    //     imageData.data[i + 2] = 200;  // B value
+    //     imageData.data[i + 3] = 255;      // A value
+    // }
+
+    // // Draw image data to the canvas
+    // ctx.putImageData(imageData, 20, 20);
+
+
+    var w = 700;
+    var spheres = [
+        w,
+        0, -w, 0,
+        9,
+        9,
+        0,
+        w,
+        2,
+        1 / 2, // ban kinh
+        0, 0, 3, // vi tri -> x,y,z
+        9, // red
+        0, // green
+        0, // blue
+        w,
+        4, // do bong
+        1 / 2,
+        -1, 1, 4,
+        0,
+        9, // green
+        0,
+        9,
+        4,
+        1 / 2,
+        1, 1, 4,
+        0,
+        0,
+        9, // blue
+        w,
+        4,
+        1 / 2,
+        0, 3, 4,
+        9,
+        9,
+        9,
+        w / 2,
+        4
+    ];
+    var ambient_light = 4,
+        lights = [8, 1, 1, 2];
+    var math = Math,
+        sqrt = math.sqrt,
+        max = math.max,
+        out_idx = 0,
+        canvas = document.getElementById("c"),
+        context2d = canvas.getContext("2d"),
+        image_data = context2d.getImageData(0, 0, w, w),
+        raw_data = image_data.data;
+    canvas.width = canvas.height = w;
+    function dot(A, B) {
+        return A[0] * B[0] + A[1] * B[1] + A[2] * B[2];
+    }
+    function A_minus_Bk(A, B, k) {
+        return [A[0] - B[0] * k, A[1] - B[1] * k, A[2] - B[2] * k];
+    }
+    function closest_intersection(B, D, t_min, t_max, w1) {
+        var v = 0;
+        for (var q = 0; q < spheres.length; q += 8) { // for each sphere
+            var r = spheres[q++];
+            var a = 2 * dot(D, D);
+            var C = [spheres[q], spheres[q + 1], spheres[q + 2]]
+            var b = 2 * (dot(C, D) - dot(B, D));
+            var d = sqrt(
+                b * b - 2 * a * (dot(B, B) + dot(C, C) - r * r - 2 * dot(B, C))
+            );
+            if (d) {
+                for (var e = 1; e >= 0; e--) {
+                    f = (b - d) / a;
+                    if (t_min < f && f < t_max && f < w1) {
+                        v = q;
+                        w1 = f;
+                    }
+                    d = -d;
+                }
+            }
+        }
+        return [v, w1];
+    }
+    function trace_ray(B, D, t_min, t_max, depth) {
+        // var s = closest_intersection(B, D, t_min, t_max, w);
+        // var t = s[1];
+        // s = s[0];
+        // if (!s) return 0;
+        // N = A_minus_Bk((X = A_minus_Bk(B, D, -t)), [spheres[s], spheres[s + 1], spheres[s + 2]], 1);
+        // n = dot(N, N);
+        // i = ambient_light;
+        // u = lights[0];
+        // k = dot(N, (L = A_minus_Bk([lights[1], lights[2], lights[3]], X, 1)));
+        // var closest = closest_intersection(X, L, 1 / w, 1, w);
+        // t = closest[1];
+        // i +=
+        //     u *
+        //     !closest[0] *
+        //     (max(0, k / sqrt(dot(L, L) * n)) +
+        //         max(
+        //             0,
+        //             math.pow(
+        //                 dot((M = A_minus_Bk(L, N, (2 * k) / n)), D) /
+        //                 sqrt(dot(M, M) * dot(D, D)),
+        //                 spheres[s + 6]
+        //             )
+        //         ));
+        // var local_color = spheres[s + c + 2] * i * 2.8,
+        //     ref = spheres[s + 7] / 9;
+        // return depth--
+        //     ? trace_ray(X, A_minus_Bk(D, N, (2 * dot(N, D)) / n), 1 / w, w, depth) *
+        //     ref +
+        //     local_color * (1 - ref)
+        //     : local_color;
+
+        var local_color = 0;
+        var ref = 1;
+        while (depth > 0) {
+            var s = closest_intersection(B, D, t_min, t_max, w);
+            var t = s[1];
+            s = s[0];
+            if (!s) return 0;
+            N = A_minus_Bk((X = A_minus_Bk(B, D, -t)), [spheres[s], spheres[s + 1], spheres[s + 2]], 1);
+            n = dot(N, N);
+            i = ambient_light;
+            u = lights[0];
+            k = dot(N, (L = A_minus_Bk([lights[1], lights[2], lights[3]], X, 1)));
+            var closest = closest_intersection(X, L, 1 / w, 1, w);
+            t = closest[1];
+            i +=
+                u *
+                !closest[0] *
+                (max(0, k / sqrt(dot(L, L) * n)) +
+                    max(
+                        0,
+                        math.pow(
+                            dot((M = A_minus_Bk(L, N, (2 * k) / n)), D) /
+                            sqrt(dot(M, M) * dot(D, D)),
+                            spheres[s + 6]
+                        )
+                    ));
+            local_color = (spheres[s + c + 2] * i * 2.8) * ref + local_color*(1-ref);
+            ref = spheres[s + 7] / 9;
+            B = X;
+            D = A_minus_Bk(D, N, (2 * dot(N, D)) / n);
+            t_min = 1/w;
+            t_max = w;
+            depth--;
+        }
+        return local_color;
+    }
+
+    for (y = h = w / 2; y-- > -h;) {
+        for (x = -h; x++ < h;) {
+            for (c = 0; ++c < 4;) {
+                const zzz = trace_ray(
+                    [0, 1, -2], // view point x,y,z
+                    [x / w, y / w, 1], // scales x,y,z
+                    2,
+                    w, // no effect
+                    1 // no effect
+                );
+                // console.log(zzz);
+                raw_data[out_idx++] = zzz;
+            }
+            raw_data[out_idx++] = 255;
+        }
+    }
+    context2d.putImageData(image_data, 0, 0);
+
+</script>

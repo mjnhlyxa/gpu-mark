@@ -20,7 +20,7 @@ function TestPage({ history }) {
     const onClick = () => {
         setStyle(styles.tada);
         setTimeout(() => {
-            history.push("/");
+            // history.push("/");
         }, 500);
     };
     return (

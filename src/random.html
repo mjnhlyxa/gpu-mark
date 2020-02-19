@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GPU.js Random Examples</title>
+</head>
+
+<body>
+  <h2>WebGL1 Random</h2>
+  <canvas id="web-gl-random-output"></canvas>
+</body>
+<script src="../dist/gpu-browser.min.js"></script>
+<script>
+  let cpu, webGL, webGL2;
+
+  // cpu = new GPU({
+  //   mode: 'cpu',
+  //   canvas: document.getElementById('cpu-random-output')
+  // });
+  try {
+    webGL = new GPU({
+      canvas: document.getElementById('web-gl-random-output')
+    });
+  } catch (e) { }
+  var w = 500;
+  var spheres = [
+    w,
+    0, -w, 0,
+    9,
+    9,
+    0,
+    w,
+    2,
+    1 / 2, // ban kinh
+    0, 0, 3, // vi tri -> x,y,z
+    9, // red
+    0, // green
+    0, // blue
+    w,
+    4, // do bong
+    1 / 2,
+    -1, 1, 4,
+    0,
+    9, // green
+    0,
+    9,
+    4,
+    1 / 2,
+    1, 1, 4,
+    0,
+    0,
+    9, // blue
+    w,
+    4,
+    1 / 2,
+    0, 3, 4,
+    9,
+    9,
+    9,
+    w / 2,
+    4
+  ];
+
+  function drawRandomFunction(spheres, length, w) {
+    var h = w / 2;
+    var y = this.thread.y - h;
+    var x = this.thread.x - h + 1;
+    var t = 1;
+    // return trace_ray([0, 1, -2], [x / w, y / w, 1], 2, w, 1, spheres, length, w);
+    return closest_intersection([0, 1, -2], [x / w, y / w, 1], 2, w, spheres, length, w)[1];
+    // var red = getColor([10, 20, 10], 1) / 255;
+    // var green = getColor([10, 20, 10], 2) / 255;
+    // var blue = getColor([10, 20, 10], 3) / 255;
+    // this.color(red, green, 0, 1);
+  }
+
+  function dot(A, B) {
+    return A[0] * B[0] + A[1] * B[1] + A[2] * B[2];
+  }
+  function A_minus_Bk(A, B, k) {
+    return [A[0] - B[0] * k, A[1] - B[1] * k, A[2] - B[2] * k];
+  }
+  function closest_intersection(B, D, t_min, t_max, spheres, length, w1) {
+    var v = 0;
+    for (var q = 0; q < length; q = q + 8) { // for each sphere
+      var r = spheres[q++];
+      var a = 2 * dot(D, D);
+      var C = [spheres[q], spheres[q + 1], spheres[q + 2]]
+      var b = 2 * (dot(C, D) - dot(B, D));
+      var d = Math.sqrt(
+        b * b - 2 * a * (dot(B, B) + dot(C, C) - r * r - 2 * dot(B, C))
+      );
+      if (d != 0) {
+        for (var e = 1; e >= 0; e--) {
+          var f = (b - d) / a;
+          if (t_min < f && f < t_max && f < w1) {
+            v = q;
+            w1 = f;
+          }
+          d = -d;
+        }
+      }
+    }
+    return [v, w1];
+    // return 1;
+  }
+  function trace_ray(B, D, t_min, t_max, depth, spheres, length, w) {
+    var s = closest_intersection(B, D, t_min, t_max, spheres, length, w);
+    // var t = s[1];
+    // s = s[0];
+    // if (!s) return 0;
+    // N = A_minus_Bk((X = A_minus_Bk(B, D, -t)), [spheres[s], spheres[s + 1], spheres[s + 2]], 1);
+    // n = dot(N, N);
+    // i = ambient_light;
+    // u = lights[0];
+    // k = dot(N, (L = A_minus_Bk([lights[1], lights[2], lights[3]], X, 1)));
+    // var closest = closest_intersection(X, L, 1 / w, 1, w, spheres, length);
+    // t = closest[1];
+    // i +=
+    //   u *
+    //   !closest[0] *
+    //   (max(0, k / sqrt(dot(L, L) * n)) +
+    //     max(
+    //       0,
+    //       math.pow(
+    //         dot((M = A_minus_Bk(L, N, (2 * k) / n)), D) /
+    //         sqrt(dot(M, M) * dot(D, D)),
+    //         spheres[s + 6]
+    //       )
+    //     ));
+    // var local_color = spheres[s + c + 2] * i * 2.8,
+    //   ref = spheres[s + 7] / 9;
+    return 1;
+    // return depth--
+    //   ? trace_ray(X, A_minus_Bk(D, N, (2 * dot(N, D)) / n), 1 / w, w, depth) *
+    //   ref +
+    //   local_color * (1 - ref)
+    //   : local_color;
+  }
+  webGL.addFunction(dot);
+  webGL.addFunction(A_minus_Bk);
+  webGL.addFunction(closest_intersection, {argumentTypes: {spheres: `Array`}});
+  webGL.addFunction(trace_ray, { argumentTypes: { B: 'Array(3)', D: 'Array(3)', t_min: 'Number', t_max: 'Number', depth: 'Number',spheres: `Array`, w: 'Number', length: 'Number' }, returnType: 'Number' });
+  const webGLDrawRandom = webGL
+    ? webGL.createKernel(drawRandomFunction)
+      // .setGraphical(true)
+      .setOutput([30, 30])
+    : () => { };
+
+  function draw() {
+    var z = webGLDrawRandom(spheres, spheres.length, 500);
+    console.log(z);
+    // requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+</script>
+
+</html>

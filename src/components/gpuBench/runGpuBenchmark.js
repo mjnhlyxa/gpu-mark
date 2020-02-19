@@ -1,13 +1,10 @@
 import React from "react";
 import "../../styles/components/gpuBenchmark.scss";
 import Dot from "../../elements/dot";
-// import { GPU } from "gpu.js";
 
 const GPU = require("gpu.js");
-// var gpu = new GPU();
 const dots = [];
 for (let i = 0; i < 20; i++) {
-    // Create a new dot and push it into the array
     dots.push(new Dot());
 }
 function kernelExcution(vers, horz, scales) {
@@ -63,7 +60,7 @@ const renderLoop = (cvDiv, kernel) => {
     requestAnimationFrame(() => renderLoop(cvDiv, kernel));
 };
 
-export const GpuBenchmark = ({ icon, action, label, className = "" }) => {
+export const RunGpuBenchmark = () => {
     const gpu = new GPU();
     const kernel = gpu.createKernel(kernelExcution, {
         graphical: true,
@@ -76,4 +73,5 @@ export const GpuBenchmark = ({ icon, action, label, className = "" }) => {
     return <div id="gpu-canvas" className="test111"></div>;
 };
 
-export default GpuBenchmark;
+
+export default RunGpuBenchmark;
